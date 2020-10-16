@@ -1,8 +1,22 @@
+/* TODO: Vertial align text in Grid Cells */
 html,
 body {
     font-size: 62.5%;
     height: 100%;
     margin: 0;
+}
+.gameGridCell {
+    background-color: #1C7970;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+.gameGridText {
+    display: inline-block;
+    vertical-align: middle;
 }
 #pageContainer {
     display: flex;
@@ -10,22 +24,46 @@ body {
     height: 100%;
 }
 #headerContainer {
-    border: 1px solid black;
+    border-bottom: 1.6vh ridge #023661;
+    border-top: 1.6vh groove #023661;
+    background-color: #04579A;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 8vh;
-    line-height: 8vh;
+    height: 7vh;
+    line-height: 7vh;
     overflow: hidden;
 }
 #headerTitleText {
     font-size: 3.2rem;
     text-align: center;
     margin: auto 0;
+    color: #FDFFFC;
 }
 #gameContainer {
-    border: 1px solid red;
+    background: #2ec4b6;
+    background: linear-gradient(180deg, #229286 0%, #2ec4b6 5%, #5bd8cc 95%, #ADECE5 100%);
     flex-grow: 1;
 }
+#gameDisplay {
+    display: grid;
+    background: #ADECE5;
+    margin: 4vh auto 0 auto;
+    width: 30%;
+    height: 35%;
+    border: 1px solid red;
+    grid-row: 3;
+    grid-column: 3;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-gap: 0.3vh;
+}
+#gameMessages {
+
+}
+#gameScore {
+
+}
 #footerContainer {
-    border: 1px solid green;
+    background: #ffb753;
+    background: linear-gradient(180deg, #FFE7C6 0%, #ffb753 20%, #af6600 85%, #693D00 100%);
     height: 8vh;
 }
