@@ -6,6 +6,12 @@ body {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.screen {
+    background: #2ec4b6;
+    background: linear-gradient(180deg, #229286 0%, #2ec4b6 5%, #5bd8cc 95%, #ADECE5 100%);
+    flex-grow: 1;
+    overflow: auto
+}
 .gameGridCell {
     background-color: #229286;
     height: 100%;
@@ -20,18 +26,20 @@ body {
 }
 .gameGridCell:hover {
     background-color: #17615Acc;
-    box-shadow: 1px 3px 18px #7DFF3D99;
+    box-shadow: 3px 2px 16px #7DFF3Dbb;
     text-shadow: 1px 1px 12px #FEFEFE99;
 }
 .gameGridText {
     margin: 0 auto;
 }
-.playerScore {
+.scoreboard {
     margin: auto 0;
     height: inherit;
     background: #FEFEFE55;
+    width: minmax(100px, max-content);
+    padding: 5px 20px;
 }
-.playerScoreText {
+.scoreboardText {
     font-size: 2rem;
     padding: 1.4rem 0;
 }
@@ -55,12 +63,6 @@ body {
     margin: auto 0;
     color: #FDFFFC;
 }
-#gameContainer {
-    background: #2ec4b6;
-    background: linear-gradient(180deg, #229286 0%, #2ec4b6 5%, #5bd8cc 95%, #ADECE5 100%);
-    flex-grow: 1;
-    overflow: auto
-}
 #gameDisplay {
     display: grid;
     background: #ADECE5;
@@ -83,15 +85,24 @@ body {
     letter-spacing: 0.2rem;
     height: 32px;
 }
-#gameScore {
+#gameScoreboard {
     width: 576px;
     margin: 0 auto;
     text-align: center;
     display: grid;
-    grid-template-columns: 25% 25%;
-    grid-template-rows: 10rem;
-    grid-gap: 50%;
+    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    grid-template-rows: 12rem;
+    grid-gap: 55%;
     margin: 0 auto;
+    justify-content: center;
+}
+#name {
+    font-variant: small-caps;
+    font-style: italic;
+}
+#score {
+    font-weight: bold;
+    font-size: 3rem;
 }
 #footerContainer {
     background: #ffb753;
